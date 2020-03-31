@@ -1,9 +1,8 @@
 document.getElementById("make").onclick=function(){
-	
+
 	year=document.getElementById("year").value;
 	month=document.getElementById("month").value;
 	date=document.getElementById("day").value;
-
 
 	let table=document.getElementById("calendar");
 
@@ -15,11 +14,6 @@ document.getElementById("make").onclick=function(){
 
 }
 
-//function setTarget(year,month,date,table){
-//	let target="target";
-//
-//}
-
 function addCalendar(year, month, date,table) {
 	//月は0~11．だから-1する必要がある
 	let usrDate = new Date(year, month-1, date);
@@ -27,11 +21,9 @@ function addCalendar(year, month, date,table) {
 	let lastDate=new Date(year, month,0);
 
 	let days=lastDate.getDate();
-	console.log(year+","+month+","+date);
-	console.log('days' + days);
 	let day_num = usrDate.getDay();
 	let firstday_num = firstDate.getDay();
-	
+
 	let row=table.insertRow(-1);;
 	let index=firstday_num;
 	//最初の空欄
@@ -46,16 +38,15 @@ function addCalendar(year, month, date,table) {
 			index=0;
 		}
 		let td=row.insertCell(-1);
+		//targetIDを付与する
 		if(i==date){
 			td.id="target";
 		}
 		td.textContent = i;
-
-		
 		index++;
 	}
 
 }
 
-	
+
 
