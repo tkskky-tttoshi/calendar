@@ -1,0 +1,26 @@
+#calendar th{
+  color:white;
+  background-color:#4169E1;
+  border-radius:50px;
+  /*display: inline-block;*/
+  width:50px;
+  height:50px;
+  text-align:center;
+  line-height:30px;
+}
+#target{
+  color:white;
+  background-color:#4169E1;
+  border-radius:50%;
+  width:15px;
+  height:15px;
+}
+#calendar td{
+  text-align:center;
+  line-height:30px;
+}
+
+#make:active{
+  background-color:#4169E1;
+
+}
